@@ -45,7 +45,7 @@ const VideoCard = ({ video: { title, thumbnail, video, creator: { username, avat
         useNativeControls
         resizeMode={ResizeMode.CONTAIN}
         onPlaybackStatusUpdate={(status) => {
-          if(!status.didJustFinish) setIsPlaying(false)
+          if(status.didJustFinish) setIsPlaying(false)
         }}
       />
       ) : (
