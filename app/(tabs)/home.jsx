@@ -37,8 +37,12 @@ const Home = () => {
           <View className="my-6 px-4 space-y-6">
             <View className="flex-row mb-6 justify-between items-start">
               <View>
-                <Text className="text-sm text-gray-100 font-pmedium">{`Welcome back, ${user.username}!`}</Text>
-                <Text className="text-2xl text-white font-psemibold">Here are some recommended posts for you.</Text>
+                <Text className="text-sm text-gray-100 font-pmedium">
+                  {`Welcome back, ${user?.username}!`}
+                </Text>
+                <Text className="text-2xl text-white font-psemibold">
+                  Here are some recommended posts for you.
+                </Text>
               </View>
               <View className="mt-1.5">
                 <Image 
