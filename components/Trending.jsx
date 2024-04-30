@@ -1,4 +1,4 @@
-import { View, Text, FlatList, TouchableOpacity, Image, ImageBackground } from 'react-native'
+import { FlatList, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import React, { useState } from 'react'
 import * as Animatable from 'react-native-animatable';
 import { icons } from '../constants'
@@ -9,7 +9,7 @@ const zoomIn = {
     scale: 0.9,
   },
   1: {
-    scale: 1.1,
+    scale: 1,
   },
 };
 
@@ -64,10 +64,10 @@ const TrendingPost = ({ activePost, post }) => {
 const Trending = ({ posts }) => {
   const [activePost, setActivePost] = useState(posts[0])
 
-  const viewablePostsChanged = ({ viewablePosts }) => {
-    if (viewablePosts)
-      if(viewablePosts.length > 0) 
-        setActivePost(viewablePosts[0].key)
+  const viewablePostsChanged = ({ viewableItems }) => {
+    if (viewableItems)
+      if(viewableItems.length > 0) 
+        setActivePost(viewableItems[0].key)
   }
 
   return (

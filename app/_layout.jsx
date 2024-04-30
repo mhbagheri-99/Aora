@@ -1,5 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
-import { Slot, Stack, SplashScreen } from 'expo-router'
+import { Stack, SplashScreen } from 'expo-router'
 import { useFonts } from 'expo-font'
 import React, { useEffect } from 'react'
 import GlobalProvider from '../context/GlobalProvider'

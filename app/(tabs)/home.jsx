@@ -14,12 +14,13 @@ const Home = () => {
   const { user } = useGlobalContext()
   const [refreshing, setRefreshing] = useState(false)
 
-  const { data: posts, refetch } = useAppwrite(getAllPosts)
-  const { data: latestPosts } = useAppwrite(getLatestPosts)
+  const { data: posts, refetch: refetchAll } = useAppwrite(getAllPosts)
+  const { data: latestPosts, refetch: refetchLatest } = useAppwrite(getLatestPosts)
 
   const onRefresh = async () => {
     setRefreshing(true)
-    await refetch()
+    await refetchAll()
+    await refetchLatest()
     setRefreshing(false)
   }
 
